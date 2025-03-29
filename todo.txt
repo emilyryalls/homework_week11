@@ -1,0 +1,7 @@
+Make layout - including navbar and footer
+Make templates - one for homepage, one for each member of team (re-use code), one for database page
+Make routes
+Data access
+Error handling (use Victoria's code for reference)
+Look at stylesheets if time?
+Simplify the app.py file - most things need to be moved to different areas
