@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<section class="container-fluid bg-1 text-center">
+        <h1>Welcome to our presentation page</h1>
+        <p>Please select a name on the Navigation Menu above to learn about each of us</p>
+    </section>
+
+    <section class="container-fluid bg-2 text-center">
+        <h1>What have we learned</h1>
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <p>HTML</p>
+            </div>
+            <div class="col-sm-4">
+                <p>CSS</p>
+            </div>
+            <div class="col-sm-4">
+                <p>BOOTSTRAP</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <p>JS</p>
+            </div>
+            <div class="col-sm-4">
+                <p>GIT</p>
+            </div>
+            <div class="col-sm-4">
+                <p>PYTHON</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <p>MYSQL</p>
+            </div>
+            <div class="col-sm-4">
+                <p>FLASK</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-3 text-center">
+        <h1>Let's get in touch! Say Hello!</h1>
+        <form method="POST" action="/submit">
+            <input type="text" name="input_data" placeholder="Enter some data">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+{% endblock %}
