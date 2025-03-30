@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+<section>
+    <div class="row strong">
+        <div class="col-sm">Firstname</div>
+        <div class="col-sm">Lastname</div>
+        <div class="col-sm">Favourite Colour</div>
+    </div>
+    <hr>
+    {% for vfavouritecolours in people %}
+    <div class="row">
+        <div class="col-sm">
+    <p>{{vfavouritecolours.firstname}}</p>
+        </div>
+        <div class="col-sm">
+    <p>{{ vfavouritecolours.lastname }}</p>
+        </div>
+        <div class="col-sm">
+    <p><strong>{{ vfavouritecolours.FavouriteColour }}</strong></p>
+        </div>
+       <hr>
+    </div>
+    {% endfor %}
+ </section>
+
+{% endblock %}

@@ -1,6 +1,7 @@
 from flask import render_template, url_for, request, redirect, session
 from doctest import debug
 from application import app
+from application.data_access import get_people
 
 
 @app.route('/')
@@ -32,4 +33,10 @@ def ayishat():
 def submit():
     data = request.form.get('input_data')
     return render_template('submit.html', title='Submit', message=data)
+
+@app.route('/database')
+def all_people_from_db():
+    people_from_db = get_people()
+    return render_template('database.html', people=people_from_db, title='Database People')
+
 
