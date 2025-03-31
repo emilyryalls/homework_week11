@@ -22,6 +22,21 @@ def get_db_connection():
     )
     return mydb
 
+
+def get_people():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    sql = "Select firstname, lastname, FavouriteColour from vfavouritecolours"
+    cursor.execute(sql)
+
+    result_set = cursor.fetchall()
+    person_list = []
+    for vfavouritecolours in result_set:
+        person_list.append({'firstname': vfavouritecolours[0], 'lastname': vfavouritecolours[1], 'FavouriteColour': vfavouritecolours[2]})
+    return person_list
+
+
 def add_person(fname, lname, col):
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -45,18 +60,3 @@ def add_person(fname, lname, col):
     cursor.execute(sql_person, val)
 
     conn.commit()
-
-def get_people():
-    conn = get_db_connection()
-    cursor = conn.cursor()
-
-    sql = "Select firstname, lastname, FavouriteColour from vfavouritecolours"
-    cursor.execute(sql)
-
-    result_set = cursor.fetchall()
-    person_list = []
-    for vfavouritecolours in result_set:
-        person_list.append({'firstname': vfavouritecolours[0], 'lastname': vfavouritecolours[1], 'FavouriteColour': vfavouritecolours[2]})
-    return person_list
-
-
