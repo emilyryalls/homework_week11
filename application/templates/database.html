@@ -1,6 +1,29 @@
 {% extends "layout.html" %}
 {% block body_content %}
-
+<section>
+    <div class="form">
+        <p> Please add a new person with its favourite color here</p>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="row">
+                <div class="col-sm">{{form.first_name.label}}</div>
+                <div class="col-sm">{{form.first_name}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm">{{form.last_name.label}}</div>
+                <div class="col-sm">{{form.last_name}}</div>
+            </div>
+                <div class="row">
+                <div class="col-sm">{{form.colour.label}}</div>
+                <div class="col-sm">{{form.colour}}</div>
+            </div>
+                <div class="row">
+                 <div class="col-sm">{{form.submit}}</div>
+                </div>
+            <hr>
+        </form>
+    </div>
+</section>
 <section>
     <div class="row strong">
         <div class="col-sm">Firstname</div>
