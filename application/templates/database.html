@@ -4,7 +4,7 @@
     <div class="form">
         <p> Please add a new person with its favourite color here</p>
         <form method="POST">
-            {{ form.hidden_tag() }}
+            {{ form.hidden_tag() }} #for security
             <div class="row">
                 <div class="col-sm">{{form.first_name.label}}</div>
                 <div class="col-sm">{{form.first_name}}</div>

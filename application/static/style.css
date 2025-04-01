@@ -5,9 +5,11 @@ body{
 }
 
 .bg-1, .bg-2, .bg-3{
-    padding: 80px;
+    padding: 60px;
 
 }
+
+
 
 .bg-1{
     background-color: #F7E1D7;
@@ -16,20 +18,14 @@ body{
 
 .bg-2{
     background-color: #EDAFB8;
-    padding-bottom: 120px;
 
 }
 
 
-.bg-4{
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
 
 
-.container-fluid.bg-1{
-    margin-top: 0%;
-}
+
+
 
 .mb-5 {
     margin-bottom: 1rem !important;
@@ -40,3 +36,27 @@ body{
     font-weight: bold;
     color: cornsilk;
 }
+
+.navbar-brand {
+    color: #4A5759;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    flex-direction: row-reverse;
+}
+
+.navbar-expand-lg .navbar-nav {
+    font-size: x-large;
+}
+
+.navbar-nav .dropdown-menu {
+    font-size: smaller;
+}
+
+
+footer {
+        width: 100%;
+    margin-top: auto; /* Keeps footer at bottom */
+
+}
+
