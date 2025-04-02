@@ -3,30 +3,59 @@
 <section>
     <div class="form">
         <p> Please add a new person with its favourite color here</p>
-        <form method="POST">
-            {{ form.hidden_tag() }} #for security
-            <div class="row">
-                <div class="col-sm">{{form.first_name.label}}</div>
-                <div class="col-sm">{{form.first_name}}</div>
-            </div>
-            <div class="row">
-                <div class="col-sm">{{form.last_name.label}}</div>
-                <div class="col-sm">{{form.last_name}}</div>
-            </div>
-                <div class="row">
-                <div class="col-sm">{{form.colour.label}}</div>
-                <div class="col-sm">{{form.colour}}</div>
-            </div>
-                <div class="row">
-                 <div class="col-sm">{{form.submit}}</div>
-                </div>
-            <p style="color:red" > {{ message}}</p>
-            <hr>
-        </form>
+<!--        <form class="form-floating" method="POST">-->
+<!--            {{ form.hidden_tag() }} &lt;!&ndash; CSRF token for security &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm">{{form.first_name.label}}</div>-->
+<!--                <div class="col-sm">{{form.first_name}}</div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm">{{form.last_name.label}}</div>-->
+<!--                <div class="col-sm">{{form.last_name}}</div>-->
+<!--            </div>-->
+<!--                <div class="row">-->
+<!--                <div class="col-sm">{{form.colour.label}}</div>-->
+<!--                <div class="col-sm">{{form.colour}}</div>-->
+<!--            </div>-->
+<!--                <div class="row">-->
+<!--                 <div class="col-sm">{{form.submit}}</div>-->
+<!--                </div>-->
+<!--            <p style="color:red" > {{ message}}</p>-->
+<!--            <hr>-->
+<!--        </form>-->
+
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <div class="row g-3 mt-2">
+        <div class="col-sm-6 form-floating">
+            {{ form.first_name(class="form-control", id="floatingFirstName", placeholder="First Name") }}
+            <label for="floatingFirstName">{{ form.first_name.label.text }}</label>
+        </div>
+    </div>
+    <div class="row g-3 mt-0">
+        <div class="col-sm-6 form-floating">
+            {{ form.last_name(class="form-control", id="floatingLastName", placeholder="Last Name") }}
+            <label for="floatingLastName">{{ form.last_name.label.text }}</label>
+        </div>
+    </div>
+    <div class="row g-3 mt-0">
+        <div class="col-sm-6 form-floating">
+            {{ form.colour(class="form-control", id="floatingColour", placeholder="Favourite Colour") }}
+            <label for="floatingColour">{{ form.colour.label.text }}</label>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-4">{{ form.submit.label.text }}</button>
+</form>
     </div>
 </section>
 <section>
     <div class="row strong">
+
+
+
         <div class="col-sm">Firstname</div>
         <div class="col-sm">Lastname</div>
         <div class="col-sm">Favourite Colour</div>
@@ -35,6 +64,7 @@
     {% for vfavouritecolours in people %}
     <div class="row">
         <div class="col-sm">
+
     <p>{{vfavouritecolours.firstname}}</p>
         </div>
         <div class="col-sm">

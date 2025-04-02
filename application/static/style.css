@@ -1,11 +1,23 @@
 body{
     background-color: #DEDBD2;
     color: #4A5759;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: x-large;
+
+}
+
+.container-fluid{
 
 }
 
 .bg-1, .bg-2, .bg-3{
-    padding: 60px;
+    padding: 65px 0;
+    flex-grow: 1;
 
 }
 
@@ -37,6 +49,15 @@ body{
     color: cornsilk;
 }
 
+.navbar {
+--bs-navbar-toggler-border-color: rgb(0 0 0 / 0%);
+    --bs-navbar-toggler-focus-width: 0.05rem;
+}
+
+.navbar-toggler:hover {
+    rgba(var(--bs-emphasis-color-rgb), 0.15)
+}
+
 .navbar-brand {
     color: #4A5759;
 }
@@ -49,14 +70,57 @@ body{
     font-size: x-large;
 }
 
+.navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
 .navbar-nav .dropdown-menu {
     font-size: smaller;
+        position: absolute;
+
 }
 
+
+.btn-primary {
+    --bs-btn-bg: #f195a2;
+    --bs-btn-border-color: #f195a2;
+    --bs-btn-hover-bg: #f78294;
+    --bs-btn-hover-border-color: #f78294;
+    --bs-btn-active-bg: #f57d8e;
+    --bs-btn-active-border-color: #f57d8e;
+}
+
+.btn-primary:active {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adding shadow */
+}
 
 footer {
-        width: 100%;
+    width: 100%;
     margin-top: auto; /* Keeps footer at bottom */
+    text-align: center;
+    padding-top: 150px;
+
 
 }
 
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+}
+@media (min-width: 800px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 30%;
+    }
+}
+@media (min-width: 1115px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}

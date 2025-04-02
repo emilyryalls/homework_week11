@@ -30,7 +30,7 @@ def get_people():
     sql = "Select firstname, lastname, FavouriteColour from vfavouritecolours"
     cursor.execute(sql)
 
-    result_set = cursor.fetchall()
+    result_set = cursor.fetchall() #cursor object, top1 fetchone
     person_list = []
     for vfavouritecolours in result_set:
         person_list.append({'firstname': vfavouritecolours[0], 'lastname': vfavouritecolours[1], 'FavouriteColour': vfavouritecolours[2]})
@@ -42,7 +42,7 @@ def add_person(fname, lname, col):
     cursor = conn.cursor()
 
     #checkk if colour exist
-    sql_check_colour = "SELECT ColourID FROM colour WHERE Name = %s"
+    sql_check_colour = "SELECT ColourID FROM colour WHERE Name = %s" # the %s the s is for string
     cursor.execute(sql_check_colour, (col,)) ## execute above query passing the colour to the placeholder %s
                                                     ## passing tuple because cursor.execute expect an iterable
     colour_result = cursor.fetchone() # hold the most recent query result if true, if false then return None
@@ -59,4 +59,4 @@ def add_person(fname, lname, col):
     val = (fname, lname, colour_id)
     cursor.execute(sql_person, val)
 
-    conn.commit()
+    conn.commit() # it commit the info into the DB
