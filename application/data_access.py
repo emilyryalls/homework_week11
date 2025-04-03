@@ -16,18 +16,21 @@ def get_db_connection():
     return mydb
 
 def get_people():
+    # like connecting to the server of the database
     conn = get_db_connection() # stablish connection with DB server and DB called "get_into_tech_c1_2025"
                                 # using user name root...
+    # like opening a query window
     cursor = conn.cursor()  # call its cursor method, which gives it the abilities to send commands
 
     sql = "Select firstname, lastname, FavouriteColour from vfavouritecolours" # selecting the first name...
     cursor.execute(sql) # and the executing them
+    # like clicking on the lightning bolt in mysql workbench
 
     result_set = cursor.fetchall() #cursor object, to fetch all that info
     person_list = [] # we run a loop to save all the rows on a list - on 0 is stored the name, on 1 the last name and on 2 the colour
                         #list were each row will be a dictionary item with keays
-    for vfavouritecolours in result_set:
-        person_list.append({'firstname': vfavouritecolours[0], 'lastname': vfavouritecolours[1], 'FavouriteColour': vfavouritecolours[2]})
+    for item in result_set:
+        person_list.append({'firstname': item[0], 'lastname': item[1], 'FavouriteColour': item[2]})
     return person_list
 
 
