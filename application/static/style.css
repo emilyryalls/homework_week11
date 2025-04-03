@@ -8,6 +8,7 @@ body {
     padding-top: 60px; /* Adjust to prevent overlap with the logo */
 }
 
+<<<<<<< HEAD
 p {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -18,11 +19,21 @@ p {
     padding: 20px;
     border-radius: 15px;
     background-color: #f3f8f2;
+=======
+.container-fluid{
+padding:0 6%;
+margin:0px;
+}
+
+p {
+    font-size: x-large;
+>>>>>>> fa211764666d021c8679e711ea33e4b2fe86c1e4
 }
 
 .bg-1, .bg-2, .bg-3 {
     padding: 70px 0;
     flex-grow: 1;
+<<<<<<< HEAD
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -42,6 +53,19 @@ p {
     background-color: #3581b8;
     color: #ebe9e9;
 }
+=======
+}
+
+/* .bg-1{
+    background-color: #F7E1D7;
+}
+
+.bg-2{
+    background-color: #EDAFB8;
+}*/
+
+
+>>>>>>> fa211764666d021c8679e711ea33e4b2fe86c1e4
 
 .mb-5 {
     margin-bottom: 1.5rem !important;
@@ -53,6 +77,7 @@ p {
     color: #ebe9e9;
 }
 
+<<<<<<< HEAD
 .section-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -60,6 +85,13 @@ p {
     gap: 20px;
     padding: 40px 0;
     text-align: center;
+=======
+.navbar {
+--bs-navbar-toggler-border-color: rgb(0 0 0 / 0%);
+    --bs-navbar-toggler-focus-width: 0.05rem;
+        background-color: #EDAFB8;
+        padding:1% 5%
+>>>>>>> fa211764666d021c8679e711ea33e4b2fe86c1e4
 }
 
 .button-shape {
@@ -85,6 +117,29 @@ p {
     color: #ebe9e9;
 }
 
+<<<<<<< HEAD
+=======
+.navbar-expand-lg .navbar-collapse {
+    flex-direction: row-reverse;
+}
+
+.navbar-expand-lg .navbar-nav {
+    font-size: x-large;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.navbar-nav .dropdown-menu {
+    font-size: smaller;
+        position: absolute;
+}
+
+
+>>>>>>> fa211764666d021c8679e711ea33e4b2fe86c1e4
 .btn-primary {
     background: #f7b79d; /* Pastel orange */
 }
@@ -115,6 +170,7 @@ p {
     margin-bottom: 15px; /* Space between buttons */
 }
 
+<<<<<<< HEAD
 .pill-button:hover {
     background-color: #f7b79d; /* Pastel orange for hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
@@ -128,5 +184,41 @@ p {
     .pill-button {
         width: 100%; /* Make buttons full width on mobile for better spacing */
         margin-bottom: 20px; /* Increase space between buttons */
+=======
+
+.form-control {
+    width: auto !important;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto; /* Keeps footer at bottom */
+    text-align: center;
+    /* padding-top: 150px; */
+    background-color:white;
+}
+
+
+:root, [data-bs-theme=light] {
+    --bs-body-line-height: 1.60;
+}
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+}
+@media (min-width: 800px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 30%;
+    }
+}
+@media (min-width: 1115px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 20%;
+>>>>>>> fa211764666d021c8679e711ea33e4b2fe86c1e4
     }
 }
