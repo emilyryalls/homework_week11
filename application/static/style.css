@@ -94,22 +94,17 @@ p {
 }
 
 
-.form-control {
-    width: auto !important;
-}
+
 
 footer {
     width: 100%;
-    margin-top: auto; /* Keeps footer at bottom */
+    /*margin-top: auto;  Keeps footer at bottom */
     text-align: center;
     /* padding-top: 150px; */
-    background-color:white;
 }
 
 
-:root, [data-bs-theme=light] {
-    --bs-body-line-height: 1.60;
-}
+
 
 @media (min-width: 576px) {
     .col-sm-6 {

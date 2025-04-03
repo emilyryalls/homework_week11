@@ -6,13 +6,6 @@ if sys.platform == "win32":
 else:
     mysql_password = ""
 
-# mydb = mysql.connector.connect(
-#   host="localhost",
-#   user="root",
-#   password=mysql_password,
-#   database="get_into_tech_c1_2025"
-# )
-
 def get_db_connection():
     mydb = mysql.connector.connect(
         host="localhost",
@@ -22,16 +15,17 @@ def get_db_connection():
     )
     return mydb
 
-
 def get_people():
-    conn = get_db_connection()
-    cursor = conn.cursor()
+    conn = get_db_connection() # stablish connection with DB server and DB called "get_into_tech_c1_2025"
+                                # using user name root...
+    cursor = conn.cursor()  # call its cursor method, which gives it the abilities to send commands
 
-    sql = "Select firstname, lastname, FavouriteColour from vfavouritecolours"
-    cursor.execute(sql)
+    sql = "Select firstname, lastname, FavouriteColour from vfavouritecolours" # selecting the first name...
+    cursor.execute(sql) # and the executing them
 
-    result_set = cursor.fetchall() #cursor object, top1 fetchone
-    person_list = []
+    result_set = cursor.fetchall() #cursor object, to fetch all that info
+    person_list = [] # we run a loop to save all the rows on a list - on 0 is stored the name, on 1 the last name and on 2 the colour
+                        #list were each row will be a dictionary item with keays
     for vfavouritecolours in result_set:
         person_list.append({'firstname': vfavouritecolours[0], 'lastname': vfavouritecolours[1], 'FavouriteColour': vfavouritecolours[2]})
     return person_list
